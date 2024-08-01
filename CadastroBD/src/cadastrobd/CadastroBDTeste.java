@@ -46,6 +46,7 @@ public class CadastroBDTeste {
             System.out.println("Pessoa Fisica incluida com ID: " + pfDao.incluir(pf));
             System.out.println("---------------------------------");
             pf.exibir();
+            pf.setNome("Gilvan Junior N. Goncalves");
             pf.setCidade("Rio de Janeiro");
             pf.setEstado("RJ");
             pfDao.alterar(pf);
@@ -81,11 +82,13 @@ public class CadastroBDTeste {
             System.out.println("Pessoa Juridica incluida com ID: " + pjDao.incluir(pj));
             System.out.println("---------------------------------");
             pj.exibir();
+            pj.setNome("Copy Story 2D");
             pj.setCidade("Belo Horizonte");
             pj.setEstado("MG");
             pjDao.alterar(pj);
             System.out.println("---------------------------------");
             System.out.println("Pessoa Juridica alterada.");
+            pj.exibir();
             ArrayList<PessoaJuridica> listaPj = pjDao.getPessoas();
             System.out.println("---------------------------------");
             System.out.println("Exibir todas as pessoas juridicas:");
